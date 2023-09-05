@@ -10,6 +10,7 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import BlogScreen from './src/screens/BlogScreen';
 import ActivityScreen from './src/screens/ActivityScreen';
 import {Image, View, StyleSheet} from 'react-native';
+import RegisterScreen from './src/screens/RegisterScreen';
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./assert/house-chimney.png')}
+                  source={require('./src/assert/house-chimney.png')}
                 />
               </View>
             ),
@@ -48,7 +49,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./assert/rss.png')}
+                  source={require('./src/assert/rss.png')}
                 />
               </View>
             ),
@@ -64,7 +65,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./assert/blog-pencil.png')}
+                  source={require('./src/assert/blog-pencil.png')}
                 />
               </View>
             ),
@@ -80,7 +81,23 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./assert/circle-user.png')}
+                  source={require('./src/assert/circle-user.png')}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Register"
+          component={RegisterScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => (
+              <View>
+                <Image
+                  style={style.icon}
+                  resizeMode="cover"
+                  source={require('./src/assert/circle-user.png')}
                 />
               </View>
             ),
