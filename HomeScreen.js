@@ -1,106 +1,27 @@
-import {BlurView} from '@react-native-community/blur';
-import {
-  View,
-  Text,
-  Button,
-  StyleSheet,
-  ScrollView,
-  Image,
-  SafeAreaView,
-} from 'react-native';
-
-const MenuBlur = () => {
-  return (
-    <BlurView
-      intensity={10}
-      style={[
-        style.absolute,
-        {flex: 1, backgroundColor: 'rgba(61, 53, 105, 0.4)'},
-      ]}
-    />
-  );
-};
+import {View, Text, Button, StyleSheet, ScrollView} from 'react-native';
 
 export const HomeScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={[style.container]}>
-      <ScrollView>
-        <View style={style.header}>
-          <MenuBlur />
-          <Image style={style.image} source={require('./src/assert/p3.jpg')} />
-          <Text style={style.headerText}>John Wick</Text>
-        </View>
-
-        <View>
-          <View style={[style.row, style.mtM]}>
-            <Text style={style.title}>Latest</Text>
-            <Text style={style.link}>See more</Text>
+    <ScrollView style={style.container}>
+      <View style={style.container}>
+        <Text style={style.title}>Appropriate World</Text>
+        <ScrollView
+          scrollEnabled={true}
+          scrollToOverflowEnabled={true}
+          horizontal={true}>
+          <View style={style.grid}>
+            <View style={style.box}></View>
+            <View style={style.box}></View>
+            <View style={style.box}></View>
+            <View style={style.box}></View>
           </View>
-          <ScrollView
-            scrollEnabled={true}
-            scrollToOverflowEnabled={true}
-            horizontal={true}>
-            <View style={style.grid}>
-              <View style={style.box}>
-                <Image
-                  style={style.image}
-                  source={require('./src/assert/p1.jpg')}
-                />
-              </View>
-              <View style={style.box}>
-                <Image
-                  style={style.image}
-                  source={require('./src/assert/p2.jpg')}
-                />
-              </View>
-              <View style={style.box}>
-                <Image
-                  style={style.image}
-                  source={require('./src/assert/p3.jpg')}
-                />
-              </View>
-              <View style={style.box}>
-                <Image
-                  style={style.image}
-                  source={require('./src/assert/p1.jpg')}
-                />
-              </View>
-            </View>
-          </ScrollView>
-        </View>
-
-        <View style={[style.row, style.mtL]}>
-          <Text style={style.title}>Trending</Text>
-          <Text style={style.link}>See more</Text>
-        </View>
-        <View style={[style.grid2, style.pbL]}>
-          <View style={style.box2}>
-            <Image
-              style={style.image}
-              source={require('./src/assert/p3.jpg')}
-            />
-          </View>
-          <View style={style.box2}>
-            <Image
-              style={style.image}
-              source={require('./src/assert/p2.jpg')}
-            />
-          </View>
-          <View style={style.box2}>
-            <Image
-              style={style.image}
-              source={require('./src/assert/p1.jpg')}
-            />
-          </View>
-          <View style={style.box2}>
-            <Image
-              style={style.image}
-              source={require('./src/assert/p3.jpg')}
-            />
-          </View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </View>
+      <View style={style.box2}></View>
+      <View style={style.box2}></View>
+      <View style={style.box2}></View>
+      <View style={style.box2}></View>
+    </ScrollView>
   );
 };
 
