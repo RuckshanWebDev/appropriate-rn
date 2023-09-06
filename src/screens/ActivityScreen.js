@@ -1,10 +1,14 @@
-import { Text } from 'react-native'
+import {SafeAreaView, Text, View} from 'react-native';
+import style from '../css';
 
-const ActivityScreen = ()=>{
-
-    return (
+const ActivityScreen = () => {
+  return (
+    <SafeAreaView style={style.container}>
+      <View>
         <Text>Activity Screen</Text>
-    )
-}
+      </View>
+    </SafeAreaView>
+  );
+};
 
-export default ActivityScreen
+export default ActivityScreen;

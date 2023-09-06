@@ -7,6 +7,11 @@ const style = StyleSheet.create({
     paddingHorizontal: 10,
     justifyContent: 'center',
   },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   p: {
     color: '#f6f4fb',
     fontSize: 16,

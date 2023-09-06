@@ -11,6 +11,25 @@ import BlogScreen from './src/screens/BlogScreen';
 import ActivityScreen from './src/screens/ActivityScreen';
 import {Image, View, StyleSheet} from 'react-native';
 import RegisterScreen from './src/screens/RegisterScreen';
+import {BlurView} from '@react-native-community/blur';
+
+const MenuBlur = () => {
+  return (
+    <View style={{flex: 1}}>
+      <View
+        style={{
+          width: '100%',
+          height: 55,
+          overflow: 'hidden',
+        }}>
+        <BlurView
+          intensity={10}
+          style={{flex: 1, backgroundColor: 'rgba(61, 53, 105, 0.4)'}}
+        />
+      </View>
+    </View>
+  );
+};
 
 const App = () => {
   return (
@@ -18,8 +37,12 @@ const App = () => {
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,
+          tabBarBackground: () => <MenuBlur />,
           tabBarStyle: {
-            backgroundColor: '#030816',
+            borderColor: 'transparent',
+            backgroundColor: 'transparent',
+            opacity: 1,
+            position: 'absolute',
           },
         }}>
         <Tab.Screen
@@ -39,6 +62,7 @@ const App = () => {
             ),
           }}
         />
+
         <Tab.Screen
           name="Activity"
           component={ActivityScreen}
@@ -87,7 +111,7 @@ const App = () => {
             ),
           }}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Register"
           component={RegisterScreen}
           options={{
@@ -102,7 +126,7 @@ const App = () => {
               </View>
             ),
           }}
-        />
+        /> */}
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -111,5 +135,12 @@ const App = () => {
 export default App;
 
 const style = StyleSheet.create({
-  icon: {width: 20, height: 20},
+  icon: {width: 25, height: 25},
+  absolute: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 30,
+    right: 0,
+  },
 });
