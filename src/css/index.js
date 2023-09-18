@@ -21,13 +21,29 @@ const style = StyleSheet.create({
   h1: {
     color: '#fff',
     fontSize: 42,
-    fontWeight: '400',
+    fontWeight: '700',
     fontFamily: 'sans',
+    lineHeight: 42,
   },
   h3: {
     color: '#fff',
     fontSize: 28,
-    fontWeight: '400',
+    lineHeight: 28,
+    fontWeight: '200',
+    fontFamily: 'sans',
+  },
+  h4: {
+    color: '#fff',
+    fontSize: 24,
+    lineHeight: 28,
+    fontWeight: '200',
+    fontFamily: 'sans',
+  },
+  h5: {
+    color: '#fff',
+    fontSize: 20,
+    lineHeight: 28,
+    fontWeight: '200',
     fontFamily: 'sans',
   },
   input: {
@@ -46,6 +62,47 @@ const style = StyleSheet.create({
     width: 10,
     margin: 20,
   },
+  row: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  column: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
+  avatarProfile: {
+    width: 150,
+    height: 150,
+    borderColor: '#fff',
+    borderWidth: 5,
+    borderRadius: 100,
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 100,
+  },
+  mtS: {marginTop: 10},
+  mtM: {marginTop: 25},
+  mtL: {marginTop: 50},
+  mbS: {marginBottom: 10},
+  mbM: {marginBottom: 25},
+  mbL: {marginBottom: 50},
+  ptS: {paddingTop: 10},
+  ptM: {paddingTop: 25},
+  ptL: {paddingTop: 50},
+  pbS: {paddingBottom: 10},
+  pbM: {paddingBottom: 25},
+  pbL: {paddingBottom: 80},
 });
+
+export const colors = {
+  primary: '#1a0939',
+};
 
 export default style;
