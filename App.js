@@ -1,17 +1,18 @@
 import {NavigationContainer} from '@react-navigation/native';
-// import {createStackNavigator} from '@react-navigation/stack';
-
+import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Tab = createBottomTabNavigator();
-
-import {HomeScreen} from './HomeScreen';
+import {HomeScreen} from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import BlogScreen from './src/screens/BlogScreen';
 import ActivityScreen from './src/screens/ActivityScreen';
 import {Image, View, StyleSheet} from 'react-native';
 import RegisterScreen from './src/screens/RegisterScreen';
 import {BlurView} from '@react-native-community/blur';
+import MusicPlayer from './src/screens/MusicPlayer';
+
+const Tab = createBottomTabNavigator();
+const Screen = createStackNavigator();
 
 const MenuBlur = () => {
   return (
@@ -24,7 +25,7 @@ const MenuBlur = () => {
         }}>
         <BlurView
           intensity={10}
-          style={{flex: 1, backgroundColor: 'rgba(61, 53, 105, 0.4)'}}
+          style={{flex: 1, backgroundColor: 'rgba(61, 53, 105, 0.5)'}}
         />
       </View>
     </View>
@@ -111,22 +112,11 @@ const App = () => {
             ),
           }}
         />
-        {/* <Tab.Screen
-          name="Register"
-          component={RegisterScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => (
-              <View>
-                <Image
-                  style={style.icon}
-                  resizeMode="cover"
-                  source={require('./src/assert/circle-user.png')}
-                />
-              </View>
-            ),
-          }}
-        /> */}
+        <Tab.Screen
+          name="Music"
+          component={MusicPlayer}
+          options={{tabBarButton: props => null, headerShown: false}}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
