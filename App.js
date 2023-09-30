@@ -10,6 +10,7 @@ import {Image, View, StyleSheet} from 'react-native';
 import RegisterScreen from './src/screens/RegisterScreen';
 import {BlurView} from '@react-native-community/blur';
 import MusicPlayer from './src/screens/MusicPlayer';
+import SingleBlog from './src/screens/SingleBlog';
 
 const Tab = createBottomTabNavigator();
 const Screen = createStackNavigator();
@@ -35,9 +36,12 @@ const MenuBlur = () => {
 const App = () => {
   return (
     <NavigationContainer>
+
       <Tab.Navigator
         screenOptions={{
-          tabBarShowLabel: false,
+          headerBackTitleVisible: true,
+          headerShown: false,
+          tabBarShowLabel: true,
           tabBarBackground: () => <MenuBlur />,
           tabBarStyle: {
             borderColor: 'transparent',
@@ -46,11 +50,14 @@ const App = () => {
             position: 'absolute',
           },
         }}>
+
+        {/* Bottom Bar */}
         <Tab.Screen
           style={style.main}
           name="Home"
           component={HomeScreen}
           options={{
+         
             headerShown: false,
             tabBarIcon: () => (
               <View>
@@ -63,7 +70,6 @@ const App = () => {
             ),
           }}
         />
-
         <Tab.Screen
           name="Activity"
           component={ActivityScreen}
@@ -112,11 +118,24 @@ const App = () => {
             ),
           }}
         />
-        <Tab.Screen
-          name="Music"
+
+        {/* Other Screens */}
+        <Tab.Screen  name="Music"
           component={MusicPlayer}
-          options={{tabBarButton: props => null, headerShown: false}}
-        />
+          options={{tabBarButton: props => null, headerShown: false}}/>
+          
+        <Tab.Screen
+        name="SingleBlog"
+        component={SingleBlog}
+        options={ ({ route }) => ({  
+          // gestureEnabled: true,
+          headerStyle: {backgroundColor: '#110428'},
+          headerTintColor: '#fff',
+          headerBackTitleVisible: true,
+          tabBarButton: props => null, 
+        }) }
+      />
+       
       </Tab.Navigator>
     </NavigationContainer>
   );
