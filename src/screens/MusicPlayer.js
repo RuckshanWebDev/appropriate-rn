@@ -1,10 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Button, Text, View} from 'react-native';
 import React from 'react';
 
-const MusicPlayer = () => {
+const MusicPlayer = async () => {
   return (
     <View>
-      <Text>MusicPlayer</Text>
+      {/* <Button title="Play" color="#777" /> */}
+      <Text>Music</Text>
     </View>
   );
 };
