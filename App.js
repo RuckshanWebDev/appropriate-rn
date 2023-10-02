@@ -11,6 +11,10 @@ import RegisterScreen from './src/screens/RegisterScreen';
 import {BlurView} from '@react-native-community/blur';
 import MusicPlayer from './src/screens/MusicPlayer';
 import SingleBlog from './src/screens/SingleBlog';
+import AddBlog from './src/components/AddBlog';
+import { colors } from './src/css';
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
 const Tab = createBottomTabNavigator();
 const Screen = createStackNavigator();
@@ -33,11 +37,33 @@ const MenuBlur = () => {
   );
 };
 
+let auth = false
+
 const App = () => {
   return (
     <NavigationContainer>
 
-      <Tab.Navigator
+      {
+        auth ?
+
+        <Screen.Navigator >
+          <Screen.Screen  name="Welcome"
+            component={WelcomeScreen}
+            options={{tabBarButton: props => null, headerShown: false}}/>
+
+          <Screen.Screen  name="Register"
+          component={RegisterScreen}
+          options={{tabBarButton: props => null, headerShown: false}}/>
+
+          <Screen.Screen  name="Login"
+            component={LoginScreen}
+            options={{tabBarButton: props => null, headerShown: false}}/>
+
+        </Screen.Navigator>
+
+        :
+
+        <Tab.Navigator
         screenOptions={{
           headerBackTitleVisible: true,
           headerShown: false,
@@ -64,7 +90,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./src/assert/house-chimney.png')}
+                  source={require('./src/assert/icons/house-chimney.png')}
                 />
               </View>
             ),
@@ -80,7 +106,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./src/assert/rss.png')}
+                  source={require('./src/assert/icons/rss.png')}
                 />
               </View>
             ),
@@ -96,7 +122,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./src/assert/blog-pencil.png')}
+                  source={require('./src/assert/icons/blog-pencil.png')}
                 />
               </View>
             ),
@@ -112,7 +138,7 @@ const App = () => {
                 <Image
                   style={style.icon}
                   resizeMode="cover"
-                  source={require('./src/assert/circle-user.png')}
+                  source={require('./src/assert/icons/circle-user.png')}
                 />
               </View>
             ),
@@ -123,7 +149,7 @@ const App = () => {
         <Tab.Screen  name="Music"
           component={MusicPlayer}
           options={{tabBarButton: props => null, headerShown: false}}/>
-          
+
         <Tab.Screen
         name="SingleBlog"
         component={SingleBlog}
@@ -133,10 +159,30 @@ const App = () => {
           headerTintColor: '#fff',
           headerBackTitleVisible: true,
           tabBarButton: props => null, 
-        }) }
-      />
+          }) }
+        />
+        <Screen.Screen
+        name="AddBlog"
+        component={AddBlog}
+        options={ {  
+          tabBarStyle: { display: "none" },
+          tabBarButton: ()=> false, 
+          headerShown: true,
+          title : 'Add a Blog',
+          headerTitleStyle : {
+            color : '#fff'
+          },
+          headerStyle : {
+            backgroundColor : colors.dark,
+          }
+          } }
+        />
        
       </Tab.Navigator>
+
+      }
+
+      
     </NavigationContainer>
   );
 };

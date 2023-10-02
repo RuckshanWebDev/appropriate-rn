@@ -45,7 +45,7 @@ const ProfileScreen = () => {
               Style.mtM,
               {gap: 20, alignItems: 'center', paddingHorizontal: 20},
             ]}>
-            <Image style={style.icon} source={require('../assert/name.png')} />
+            <Image style={style.icon} source={require('../assert/icons/name.png')} />
             <Text style={Style.h5}>Ruckshan</Text>
           </View>
           <View
@@ -54,7 +54,7 @@ const ProfileScreen = () => {
               Style.mtS,
               {gap: 20, alignItems: 'center', paddingHorizontal: 20},
             ]}>
-            <Image style={style.icon} source={require('../assert/dob.png')} />
+            <Image style={style.icon} source={require('../assert/icons/dob.png')} />
             <Text style={Style.h5}>12.03.2001</Text>
           </View>
           <View
@@ -65,7 +65,7 @@ const ProfileScreen = () => {
             ]}>
             <Image
               style={style.icon}
-              source={require('../assert/creator.png')}
+              source={require('../assert/icons/creator.png')}
             />
             <Text style={Style.h5}>Developer</Text>
           </View>
@@ -77,7 +77,7 @@ const ProfileScreen = () => {
             ]}>
             <Image
               style={style.icon}
-              source={require('../assert/location.png')}
+              source={require('../assert/icons/location.png')}
             />
             <Text style={Style.h5}>Canada</Text>
           </View>
@@ -89,7 +89,7 @@ const ProfileScreen = () => {
             ]}>
             <Image
               style={style.icon}
-              source={require('../assert/interest.png')}
+              source={require('../assert/icons/interest.png')}
             />
             <Text style={Style.h5}>Sports, Games</Text>
           </View>

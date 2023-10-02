@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Style, { colors } from '../css';
 
-const RegisterScreen = ({navigation}) => {
+const LoginScreen = ({navigation}) => {
   return (
     <View style={[Style.bg, { justifyContent : 'space-around'}]}>
       <Image
@@ -18,16 +18,6 @@ const RegisterScreen = ({navigation}) => {
         source={require('../assert/logo.gif')}
       />
       <View>
-
-      <TextInput
-        style={Style.input}
-        underlineColorAndroid="#f000"
-        placeholder="Name"
-        placeholderTextColor="#8b9cb5"
-        autoCapitalize="sentences"
-        returnKeyType="next"
-        blurOnSubmit={false}
-      />
       <TextInput
         style={Style.input}
         underlineColorAndroid="#f000"
@@ -46,14 +36,14 @@ const RegisterScreen = ({navigation}) => {
         returnKeyType="next"
         blurOnSubmit={false}
       />
-      <Button color={colors.secondry} style={Style.btn} title="Register" />
+      <Button color={colors.secondry} style={Style.btn} title="Login" />
       </View>
-      <TouchableOpacity onPress={()=> navigation.navigate('Login') } ><Text style={[Style.p, { textAlign : 'center' }]} >Already have a Account?<Text style={{ textDecorationLine : 'underline' }} > Login</Text></Text></TouchableOpacity>
+      <TouchableOpacity onPress={()=> navigation.navigate('Register') } ><Text style={[Style.p, { textAlign : 'center' }]} >New to Appropriate Wolrd? <Text style={{ textDecorationLine : 'underline' }} > Register</Text></Text></TouchableOpacity>
     </View>
   );
 };
 
-export default RegisterScreen;
+export default LoginScreen;
 
 const style = StyleSheet.create({
   container: {
