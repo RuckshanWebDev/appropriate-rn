@@ -11,6 +11,8 @@ import RegisterScreen from './src/screens/RegisterScreen';
 import {BlurView} from '@react-native-community/blur';
 import MusicPlayer from './src/screens/MusicPlayer';
 import SingleBlog from './src/screens/SingleBlog';
+import AddBlog from './src/components/AddBlog';
+import { colors } from './src/css';
 
 const Tab = createBottomTabNavigator();
 const Screen = createStackNavigator();
@@ -123,7 +125,7 @@ const App = () => {
         <Tab.Screen  name="Music"
           component={MusicPlayer}
           options={{tabBarButton: props => null, headerShown: false}}/>
-          
+
         <Tab.Screen
         name="SingleBlog"
         component={SingleBlog}
@@ -133,8 +135,24 @@ const App = () => {
           headerTintColor: '#fff',
           headerBackTitleVisible: true,
           tabBarButton: props => null, 
-        }) }
-      />
+          }) }
+        />
+        <Screen.Screen
+        name="AddBlog"
+        component={AddBlog}
+        options={ {  
+          tabBarStyle: { display: "none" },
+          tabBarButton: ()=> false, 
+          headerShown: true,
+          title : 'Add a Blog',
+          headerTitleStyle : {
+            color : '#fff'
+          },
+          headerStyle : {
+            backgroundColor : colors.dark,
+          }
+          } }
+        />
        
       </Tab.Navigator>
     </NavigationContainer>

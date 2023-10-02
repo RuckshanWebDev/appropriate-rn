@@ -1,5 +1,11 @@
 import {StyleSheet} from 'react-native';
 
+export const colors = {
+  primary: '#1a0939',
+  secondry : '#53476b',
+  dark: '#110428'
+};
+
 const style = StyleSheet.create({
   bg: {
     flex: 1,
@@ -87,12 +93,37 @@ const style = StyleSheet.create({
     height: 60,
     borderRadius: 100,
   },
+  inputFullWidth : {
+    borderColor : '#fff',
+    color : "#fff",
+    borderWidth: 2,
+    padding : 10,
+    borderRadius : 5,
+    fontSize: 18
+  }, 
+  btn: {
+    backgroundColor : colors.secondry,
+    alignSelf: "flex-end",
+    paddingHorizontal : 22,
+    paddingVertical : 12,
+    borderRadius : 5
+  },
+  btnText : {
+    color : "#fff",
+    fontSize : 22
+  },
   mtS: {marginTop: 10},
   mtM: {marginTop: 30},
   mtL: {marginTop: 50},
   mbS: {marginBottom: 10},
   mbM: {marginBottom: 30},
   mbL: {marginBottom: 50},
+  mlS: {marginLeft: 10},
+  mlM: {marginLeft: 30},
+  mlL: {marginLeft: 50},
+  mrS: {marginRight: 10},
+  mrM: {marginRight: 30},
+  mrL: {marginRight: 50},
   ptS: {paddingTop: 10},
   ptM: {paddingTop: 30},
   ptL: {paddingTop: 50},
@@ -101,8 +132,6 @@ const style = StyleSheet.create({
   pbL: {paddingBottom: 80},
 });
 
-export const colors = {
-  primary: '#1a0939',
-};
+
 
 export default style;

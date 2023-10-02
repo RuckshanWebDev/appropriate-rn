@@ -2,6 +2,7 @@ import {Image,SafeAreaView,ScrollView,StyleSheet,Text,View,TouchableOpacity } fr
 import Style from '../css';
 import {BlurView} from '@react-native-community/blur';
 import {colors} from '../css';
+import FloatButton from '../components/FloatButton';
 
 const BlogScreen = ({navigation}) => {
 
@@ -11,6 +12,7 @@ const BlogScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={[style.bg, Style.pbM]}>
+      <FloatButton type={'add'} redirect={'AddBlog'} />
       <ScrollView>
         <TouchableOpacity key={3} style={[style.blog, Style.mbM]} onPress={blogPressHandler} >
           <Image style={[style.blogCover]} source={require('../assert/p1.jpg')} />
