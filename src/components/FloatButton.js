@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { colors } from '../css'
 import { useNavigation } from '@react-navigation/native';
@@ -17,7 +17,7 @@ const FloatButton = ({type, action = null, redirect = null}) => {
 
   return (
     <TouchableOpacity style={styles.addContainer} onPress={FloatButtonHandler} >
-      <Text style={styles.icon} >+</Text>
+      <Image source={require('../assert/icons/plus.png')}  style={styles.icon}  />
     </TouchableOpacity>
   )
 }
@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
         borderRadius : 50,
         padding : 10,
         color : '#fff',
-        // width : 30,
+        // width : 25,
         // height : 30
     },
     icon : {
-        color : '#fff',
-        lineHeight: 16,
+        width : 25,
+        height : 25
     }
 })

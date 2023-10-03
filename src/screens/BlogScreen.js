@@ -41,7 +41,7 @@ const style = StyleSheet.create({
   },
   blog: {
     alignSelf: 'stretch',
-    backgroundColor: '#110428',
+    backgroundColor: colors.dark,
     width: '100%',
     height: 'auto',
     borderRadius: 10,

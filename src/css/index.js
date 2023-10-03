@@ -1,15 +1,19 @@
 import {StyleSheet} from 'react-native';
 
 export const colors = {
-  primary: '#1a0939',
-  secondry : '#53476b',
-  dark: '#110428'
+  primary: '#312880',
+  secondry : '#6b6ed4',
+  thursary : '#a5a7e9',
+  // primary: '#1a0939',
+  // secondry : '#53476b',
+  dark: '#110428',
+  
 };
 
 const style = StyleSheet.create({
   bg: {
     flex: 1,
-    backgroundColor: '#1a0939',
+    backgroundColor: colors.primary,
     paddingHorizontal: 10,
     justifyContent: 'center',
   },
@@ -52,6 +56,12 @@ const style = StyleSheet.create({
     fontWeight: '200',
     fontFamily: 'sans',
   },
+  span:{
+    color: '#f6f4fb',
+    fontSize: 12,
+    fontWeight: '400',
+    fontFamily: 'sans',
+  },
   input: {
     color: 'white',
     paddingLeft: 15,
@@ -72,6 +82,16 @@ const style = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
+  rowSb: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems : 'center',
+    justifyContent : 'space-between'
+  },
+  icon : {
+    width : 25,
+    height : 25
+},
   column: {
     flex: 1,
     flexDirection: 'column',
@@ -88,6 +108,27 @@ const style = StyleSheet.create({
     borderWidth: 5,
     borderRadius: 100,
   },
+  avatarProfileM :{
+    width: 100,
+    height: 100,
+    borderColor: '#fff',
+    borderWidth: 5,
+    borderRadius: 100,
+  } ,
+  avatarProfileS :{
+    width: 50,
+    height: 50,
+    borderColor: '#fff',
+    borderWidth: 0,
+    borderRadius: 100,
+  } ,
+  avatarProfileSm :{
+    width: 40,
+    height: 40,
+    borderColor: '#fff',
+    borderWidth: 0,
+    borderRadius: 100,
+  } ,
   avatar: {
     width: 60,
     height: 60,
@@ -128,7 +169,7 @@ const style = StyleSheet.create({
   ptM: {paddingTop: 30},
   ptL: {paddingTop: 50},
   pbS: {paddingBottom: 10},
-  pbM: {paddingBottom: 30},
+  pbM: {paddingBottom: 40},
   pbL: {paddingBottom: 80},
 });
 
