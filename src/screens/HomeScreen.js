@@ -39,11 +39,11 @@ export const HomeScreen = ({navigation}) => {
             style={style.image}
             source={require('../assert/COMING_SOON/8_JuFuzzyFam-3.jpg')}
           />
-          <Text style={style.headerText}>John Wick</Text>
+          <Text style={style.headerText}>John Wicks</Text>
         </View>
 
         {/* New Release */}
-        <View style={[style.row, style.mtM]}>
+        <View style={[style.row, style.mtL]}>
           <Text style={style.title}>New Release</Text>
           <Text style={style.link}>See more</Text>
         </View>
@@ -129,9 +129,9 @@ export const HomeScreen = ({navigation}) => {
         </View>
 
         {/* Horizontal */}
-        <View style={style.pbL}>
+        <View >
           <View style={[style.row, style.mtM]}>
-            <Text style={style.title}>Coming Soon</Text>
+            <Text style={style.title}>Videos </Text>
             <Text style={style.link}>See more</Text>
           </View>
           <ScrollView
@@ -178,7 +178,7 @@ export const HomeScreen = ({navigation}) => {
         </View>
 
         {/* Coming Soon */}
-        <View style={style.pbL}>
+        <View style={[style.pbL, style.ptL]}>
           <View style={[style.row, style.mtM]}>
             <Text style={style.title}>Coming Soon</Text>
             <Text style={style.link}>See more</Text>
@@ -307,15 +307,15 @@ const style = StyleSheet.create({
   },
   box2: {
     backgroundColor: '#651064',
-    width: '48%',
+    width: '47%',
     height: 250,
     borderRadius: 15,
     overflow: 'hidden',
   },
   box3: {
     backgroundColor: '#651064',
-    width: 260,
-    height: 190,
+    width: 280,
+    height: 170,
     borderRadius: 15,
     overflow: 'hidden',
   },
