@@ -8,16 +8,26 @@ const FloatButton = ({type, action = null, redirect = null}) => {
 
   const navigation = useNavigation();
 
-
   const FloatButtonHandler = ()=>{
     if(redirect){
       navigation.navigate(redirect)
     }
   }
 
+  const Icon = ()=>{
+    switch(type) {
+     case 'community':
+       return   <Image source={require('../assert/icons/chat2.png')}  style={styles.icon}  />;
+     case 'add':
+       return   <Image source={require('../assert/icons/plus.png')}  style={styles.icon}  />;
+     default:
+       return 'foo';
+   }
+  }
+
   return (
     <TouchableOpacity style={styles.addContainer} onPress={FloatButtonHandler} >
-      <Image source={require('../assert/icons/plus.png')}  style={styles.icon}  />
+      <Icon />
     </TouchableOpacity>
   )
 }
@@ -29,10 +39,10 @@ const styles = StyleSheet.create({
         position : 'absolute',
         bottom : 70,
         right : 20,
-        backgroundColor : colors.secondry,
+        backgroundColor : colors.dark,
         zIndex : 5,
         borderRadius : 50,
-        padding : 10,
+        padding : 15,
         color : '#fff',
         // width : 25,
         // height : 30
