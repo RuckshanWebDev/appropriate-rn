@@ -27,20 +27,21 @@ const styles = StyleSheet.create({
     flex : 1,
   },
   row: {
-    padding : 10,
+    paddingHorizontal : 10,
+    paddingVertical : 30,
     flex : 1,
     flexDirection : 'row',
     gap : 6,
     // height : 70,
     alignItems :'center',
-    borderBottomColor : "#e5e5e5",
-    borderWidth : 1
+    borderColor : "#fff",
+    borderBottomWidth : 0.3
 
   },
   input:{
     paddingHorizontal : 15,
     color : "#fff",
-    borderWidth: 2,
+    // borderWidth: 2,
     padding : 10,
     borderRadius : 50,
     fontSize: 18,

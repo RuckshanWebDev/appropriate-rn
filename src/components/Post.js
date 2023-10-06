@@ -17,10 +17,10 @@ const Post = ({text = null, image = null}) => {
             </TouchableOpacity>
         </View>
         <View style={styles.postContent} >
-            { image && <Image style={styles.postContentImage} source={require('../assert/p1.jpg')} />}
+            { image && <Image style={styles.postContentImage} source={require('../assert/p2.jpg')} />}
             { text &&  <Text style={[Style.span , {padding : 10}]} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>}
             </View>
-        <View style={[styles.postFooter, Style.row, { alignItems :'center', justifyContent : 'space-around', padding : 10 }]} >
+        <View style={[styles.postFooter, Style.row,Style.pbS, { alignItems :'center', justifyContent : 'space-around' }]} >
             <TouchableOpacity >
                 <Image style={[Style.icon]} source={require('../assert/icons/heart.png')} />
             </TouchableOpacity>
@@ -36,10 +36,12 @@ export default Post
 
 const styles = StyleSheet.create({
     postContainer : {
-        // backgroundColor : '#00f'
+        borderColor : '#fff',
+        borderBottomWidth :0.5,
+
     },
     postHeader : {
-        padding : 10
+        padding : 10,
     },
     postContent : {
         height : 'auto'
@@ -49,6 +51,9 @@ const styles = StyleSheet.create({
         height : 300,
         width : '100%'
     },
-    postFooter : {},
+    postFooter : {
+        paddingTop : 5,
+        marginBottom : 20
+    },
 
 })

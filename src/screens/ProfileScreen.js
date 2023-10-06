@@ -107,7 +107,7 @@ const style = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   profileBg: {
-    backgroundColor: '#53476b',
+    backgroundColor: colors.secondry ,
     padding: 10,
     borderBottomLeftRadius: 15,
     borderBottomEndRadius: 15,

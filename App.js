@@ -15,6 +15,9 @@ import AddBlog from './src/components/AddBlog';
 import { colors } from './src/css';
 import WelcomeScreen from './src/screens/WelcomeScreen';
 import LoginScreen from './src/screens/LoginScreen';
+import ChatScreen from './src/screens/ChatScreen';
+import MessageScreen from './src/screens/MessageScreen';
+import CommunityScreen from './src/screens/CommunityScreen';
 
 const Tab = createBottomTabNavigator();
 const Screen = createStackNavigator();
@@ -67,7 +70,7 @@ const App = () => {
         screenOptions={{
           headerBackTitleVisible: true,
           headerShown: false,
-          tabBarShowLabel: true,
+          tabBarShowLabel: false,
           tabBarBackground: () => <MenuBlur />,
           tabBarStyle: {
             borderColor: 'transparent',
@@ -107,6 +110,22 @@ const App = () => {
                   style={style.icon}
                   resizeMode="cover"
                   source={require('./src/assert/icons/rss.png')}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Chat"
+          component={ChatScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => (
+              <View>
+                <Image
+                  style={style.icon}
+                  resizeMode="cover"
+                  source={require('./src/assert/icons/chat.png')}
                 />
               </View>
             ),
@@ -168,6 +187,38 @@ const App = () => {
           tabBarStyle: { display: "none" },
           tabBarButton: ()=> false, 
           headerShown: true,
+          title : 'Add a Blog',
+          headerTitleStyle : {
+            color : '#fff'
+          },
+          headerStyle : {
+            backgroundColor : colors.dark,
+          }
+          } }
+        />
+        <Screen.Screen
+        name="Message"
+        component={MessageScreen}
+        options={ {  
+          tabBarStyle: { display: "none" },
+          tabBarButton: ()=> false, 
+          headerShown: false,
+          title : 'Add a Blog',
+          headerTitleStyle : {
+            color : '#fff'
+          },
+          headerStyle : {
+            backgroundColor : colors.dark,
+          }
+          } }
+        />
+        <Screen.Screen
+        name="Community"
+        component={CommunityScreen}
+        options={ {  
+          tabBarStyle: { display: "none" },
+          tabBarButton: ()=> false, 
+          headerShown: false,
           title : 'Add a Blog',
           headerTitleStyle : {
             color : '#fff'

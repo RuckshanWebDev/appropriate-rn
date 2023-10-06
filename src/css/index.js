@@ -7,10 +7,9 @@ export const colors = {
   // primary: '#1a0939',
   // secondry : '#53476b',
   dark: '#110428',
-  
 };
 
-const style = StyleSheet.create({
+const Style = StyleSheet.create({
   bg: {
     flex: 1,
     backgroundColor: colors.primary,
@@ -34,6 +33,13 @@ const style = StyleSheet.create({
     fontWeight: '700',
     fontFamily: 'sans',
     lineHeight: 42,
+  },
+  h2: {
+    color: '#fff',
+    fontSize: 34,
+    fontWeight: '700',
+    fontFamily: 'sans',
+    lineHeight: 34,
   },
   h3: {
     color: '#fff',
@@ -175,4 +181,4 @@ const style = StyleSheet.create({
 
 
 
-export default style;
+export default Style;
