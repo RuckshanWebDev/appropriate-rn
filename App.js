@@ -40,7 +40,7 @@ const MenuBlur = () => {
   );
 };
 
-let auth = false
+let auth = true
 
 const App = () => {
   return (
