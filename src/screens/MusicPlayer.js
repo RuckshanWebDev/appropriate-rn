@@ -14,11 +14,11 @@ const MusicPlayer = () => {
         {/* TITLE */}
         {/* TIMELINE */}
         <Slider
-          style={{width: 200, height: 40}}
+          style={{width: '90%', height: 40}}
           minimumValue={0}
           maximumValue={1}
-          minimumTrackTintColor="#FFFFFF"
-          maximumTrackTintColor="#000000"
+          minimumTrackTintColor={colors.secondry}
+          maximumTrackTintColor={colors.secondry}
         />
               
         {/* BUTTON OPTIONS */}
