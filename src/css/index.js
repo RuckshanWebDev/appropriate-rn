@@ -99,6 +99,14 @@ const Style = StyleSheet.create({
     width : 25,
     height : 25
 },
+  iconS : {
+    width : 20,
+    height : 20
+},
+  iconL : {
+    width : 30,
+    height : 30
+  },
   column: {
     flex: 1,
     flexDirection: 'column',

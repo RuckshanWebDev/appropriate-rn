@@ -48,12 +48,16 @@ export const HomeScreen = ({navigation}) => {
           <Text style={style.link}>See more</Text>
         </View>
         <View style={[style.grid2, style.pbL]}>
-          <View style={style.box2}>
-            <Image
-              style={style.image}
-              source={require('../assert/NEW_RELEASES/1_AC_1.5.png')}
-            />
-          </View>
+        <TouchableHighlight
+            underlayColor="black"
+            onPress={() => musicHandler('man with the gun')} style={style.box2}>
+              <View >
+                <Image
+                  style={style.image}
+                  source={require('../assert/NEW_RELEASES/1_AC_1.5.png')}
+                />
+              </View>
+        </TouchableHighlight>
           <View style={style.box2}>
             <Image
               style={style.image}
