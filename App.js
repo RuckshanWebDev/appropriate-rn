@@ -18,6 +18,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import ChatScreen from './src/screens/ChatScreen';
 import MessageScreen from './src/screens/MessageScreen';
 import CommunityScreen from './src/screens/CommunityScreen';
+import VideoPlayer from './src/screens/VideoPlayer';
 
 const Tab = createBottomTabNavigator();
 const Screen = createStackNavigator();
@@ -167,6 +168,10 @@ const App = () => {
         {/* Other Screens */}
         <Tab.Screen  name="Music"
           component={MusicPlayer}
+          options={{tabBarButton: props => null, headerShown: false}}/>
+
+        <Tab.Screen  name="Video"
+          component={VideoPlayer}
           options={{tabBarButton: props => null, headerShown: false}}/>
 
         <Tab.Screen

@@ -28,6 +28,9 @@ export const HomeScreen = ({navigation}) => {
   const musicHandler = e => {
     navigation.navigate('Music');
   };
+  const videoHandler = e => {
+    navigation.navigate('Video');
+  };
 
   return (
     <SafeAreaView style={[style.container]}>
@@ -145,7 +148,7 @@ export const HomeScreen = ({navigation}) => {
             <View style={style.grid}>
               <TouchableHighlight
                 underlayColor="black"
-                onPress={() => musicHandler('man with the gun')}>
+                onPress={() => videoHandler('man with the gun')}>
                 <View style={style.box3}>
                   <Image
                     style={style.image}
